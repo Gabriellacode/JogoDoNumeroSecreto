@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--azulEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --preto: black;
+    --branco: white;
+    --azulClaro: #504bb8;
+    --azulMedio: #3c3ba5;
+    --azulEscuro: #272b92;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--azulClaro);
+    border-radius: 8px;
+    border: 1px solid var(--branco);
+    padding: 0.625rem;
+    gap: 1.25rem;
+}
+.container_titulo{
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--branco);
+}
+
+.container_texto{
+    font-size: 1.5rem;
+    color: var(--branco);
+
+}
+.container_input {
+    width: 22rem;
+    height: 30px;
+    color: var(--preto);
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid var(--azulEscuro);
+}
+
+.container__botoes {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.container__botao {
+    text-transform: uppercase;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.625rem;
+    background-color: var(--azulEscuro);
+    color: var(--branco);
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--branco);
+}
+
+.container__botao:hover {
+    background-color: var(--azulMedio);
+    border: 1px solid var(--azulEscuro);
+}
+
+.img_mago {
+    max-width: 50%;
+    height: auto; 
+}
+
+.container_resposta{
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: var(--branco);
+    text-shadow: -1px 0 var(--azulEscuro), 0 1px var(--azulEscuro), 1px 0 var(--azulEscuro), 0 -1px var(--azulEscuro);
+}
+
+@media only screen and (max-width: 520px){
+    .container {
+        width: 90%;
+    }
+    .container_titulo{
+       text-align: center;
+    }
+    
+    .container_texto{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 255px){
+    .container {
+        width: 20rem;
+        gap: .8rem;
+    }
+  
+    .container_input {
+        width: 15rem;
+    
+    }
+    
+    .container__botoes {
+        flex-direction: column;
+        gap: .5rem;
+        
+    }
+    .container_resposta{
+        text-align: center;
+    }
+   
+    
+}
